@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mern-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        value: mongodb+srv://aswin_db:aswin123@cluster0.crjc0b1.mongodb.net/aswin_db?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: 604466691e6e2d6787584dcbd2831c43141cc13c9c2dfc5ea3d5e50876399389
